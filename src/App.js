@@ -9,14 +9,16 @@ import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
 // import Field from './Field';
 
 function App() {
-  const[task,setTask] = useState("")
-  const[Priority,setPr] = useState("")
+  const[form,setForm] =useState({})
+  // const[task,setTask] = useState("")
+  // const[Priority,setPr] = useState("")
   const[data , setData] = useState([])
 
   const addData = ()=>{
-    setData([ ...data, {task,Priority}])
-    setTask("")
-    setPr("")
+    setData([ ...data, form])
+    // setTask("")
+    // setPr("")
+    setForm({form, task:"",Priority:""})
   }
   const removeItem = (index)=>{
     let arr = data;
@@ -28,9 +30,9 @@ function App() {
       <Header/>
       <div className='record'>
       <Stack direction="row" spacing={2}>
-        <TextField value ={task} onChange={(event)=>{setTask(event.target.value)}} id="outlined-basic" label="Task" variant="outlined" />
+        <TextField value ={form.task} onChange={(event)=>{setForm({...form,task : event.target.value})}} id="outlined-basic" label="Task" variant="outlined" />
         
-        <TextField value ={Priority} onChange={(event)=>{setPr(event.target.value)}} id="outlined-basic" label="Priority" variant="outlined" />
+        <TextField value ={form.Priority} onChange={(event)=>{setForm({...form,Priority:event.target.value})}} id="outlined-basic" label="Priority" variant="outlined" />
         
         <Button variant="contained" onClick={addData} color='success'><AddRoundedIcon /></Button>
       </Stack>
