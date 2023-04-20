@@ -1,8 +1,53 @@
 .App {
   text-align: center;
-  padding-top: 10%;
+  align-items: center;
+}
+.header{
+  background-color: #2B3467;
+  padding: 15px;
+  color: #FCFFE7;
+  margin: 0;
+  
 }
 
+.record{
+  margin: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.data{
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+}
+.listhead{
+  display: flex;
+  justify-content: space-between;
+  background-color: #2B3467;
+  color: #FCFFE7;
+  width: 50%;
+  margin-top: 10px;
+  border-radius: 15px ;
+  padding: 0px 10px 0px 10px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.list{
+  display: flex;
+  justify-content: space-between;
+  background-color: #BAD7E9;
+  color: #2B3467;
+  width: 50%;
+  margin-top: 10px;
+  border-radius: 15px ;
+  padding: 0px 10px 0px 10px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+/* 
 .number{
   font-size: 100px;
   padding: 8px;
@@ -15,4 +60,4 @@
   border-radius: 15px;
   border: 0;
   font-size: larger;
-}
+} */
